@@ -2,6 +2,7 @@ package nanowrimo.com.nanowrimo.Controller;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 // import org.springframework.beans.factory.annotation.Autowired;
 // import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -21,7 +22,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 @RequestMapping(value = "/api")
 public class NaNoWriMoController {
  
-    
+    @Autowired
     private NaNoWriMoRepository nanowrimoRepository;
 
     @GetMapping("/allBooks")

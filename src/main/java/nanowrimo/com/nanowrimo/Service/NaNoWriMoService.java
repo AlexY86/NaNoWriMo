@@ -1,17 +1,18 @@
 package nanowrimo.com.nanowrimo.Service;
 
+import java.util.ArrayList;
+import java.util.List;
 
+import nanowrimo.com.nanowrimo.DTO.BooksDTO;
+import nanowrimo.com.nanowrimo.Repository.NaNoWriMoRepository;
 
-public class NaNoWriMoService {
+public interface NaNoWriMoService {
 
-    @Autowired
-    NaNoWriMoRepository nanowrimoRepository;
+     NaNoWriMoRepository naNoWriMoRepository;
 
-    public List<BooksDTO> getAllBooks()
+     public List<BooksDTO> booksDTOs = new ArrayList<BooksDTO>();
+NaNoWriMoRepository.findAll().forEach(booksDTOs -> booksDTOs.add(booksDTOs));
 }
 
-List<BooksDTO> books = new ArrayList<BooksDTO>();
-nanowrimoRepository.findAll().forEach(books -> books.add(books));
-return books;
 
 }

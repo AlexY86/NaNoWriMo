@@ -4,17 +4,24 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
+
+import lombok.Data;
+@Data
 public class BooksDTO {
 
+    private long id;
 
-    private Long id; 
-    private String name;
+    private String bookName;
+
     private String date;
+
     private Integer chapters;
+
     private Integer records;
+
     private Integer wordCount;
     
-
+// date conversion back and forth from client and server
     private static final SimpleDateFormat dateFormat
       = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 
