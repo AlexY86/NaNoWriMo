@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-NanowrimoApplication<nanowrimo>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "nanowrimo.com.nanowrimo.NanowrimoApplication",
+            "projectName": "nanowrimo",
+            "args": ""
+        }
+    ]
+}
