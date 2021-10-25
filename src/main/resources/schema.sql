@@ -1,13 +1,13 @@
-CREATE TABLE books (
-    id INT NULL,
-    name VARCHAR(50) NULL,
+CREATE TABLE BOOKS (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    bookName VARCHAR(50) NOT NULL,
     date TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,
-    chapters INT NULL, 
-    records INT NULL, 
-    wordCount INT NULL
+    chapters INT(10) NULL, 
+    records INT(10) NULL, 
+    wordCount INT(50000) NULL
 );
 
-CREATE TABLE book_items(
+CREATE TABLE BOOK_ITEMS(
     id INT NULL,
     name VARCHAR(50) NULL,
     date TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP,

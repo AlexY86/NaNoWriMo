@@ -2,14 +2,15 @@ package nanowrimo.com.nanowrimo.Model;
 
 import java.util.Date;
 
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.annotation.Id;
-
+@EntityScan
+@Table
 public class NaNoWriMo {
 
-    @Id
     private long id;
 
-    private String name;
+    private String bookName;
 
     private Date date;
 
@@ -25,8 +26,8 @@ public class NaNoWriMo {
     }
 
     
-    public NaNoWriMo(String name, Date date, Integer chapters, Integer records, Integer wordCount){
-        this.name = name;
+    public NaNoWriMo(String bookName, Date date, Integer chapters, Integer records, Integer wordCount){
+        this.bookName = bookName;
         this.date = date;
         this.chapters = chapters;
         this.records = records;
@@ -35,17 +36,27 @@ public class NaNoWriMo {
     }
 
     @Id
+    @GeneratedValue(value = GenerationType.AUTO)
     public long getId() {
         return id;
     }
 
-    @Column(name = "name")
-    public String getName(){
-        return name;
+    public NaNoWriMo(long id) {
+        this.id = id;
     }
 
-    public void setName(String name){
-        this.name = name;
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    @Column(name = "bookName")
+    public String getbookName(){
+        return bookName;
+    }
+
+    public void setName(String bookName){
+        this.bookName = bookName;
     }
 
     @Column(name = "date")

@@ -1,4 +1,4 @@
-INSERT INTO books(id, name, date, chapters, records, wordcount)
+INSERT INTO BOOKS(id, name, date, chapters, records, wordcount)
 VALUES
 (1, 'Book1', NOW(), 1, 1, 100),
 (2, 'Book2', NOW(), 2, 1, 200),
@@ -7,7 +7,7 @@ VALUES
 (5, 'Book5', NOW(), 5, 1, 500),
 
 
-INSERT INTO book_items(id, name, date, chapters, records, wordcount) 
+INSERT INTO BOOK_ITEMS(id, name, date, chapters, records, wordcount) 
 VALUES 
 (1, 'Book1', NOW(), 20, 1, 100),
 (2, 'Book2', NOW(), 10, 2, 200);
